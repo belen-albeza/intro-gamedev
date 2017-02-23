@@ -1,0 +1,44 @@
+<svg version="1.1" width="668" height="507" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs/>
+  <g transform="matrix(1, 0, 0, 1, 166, 10)">
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 314.05 58.3 Q 315.95 63.1 315.95 66.4 Q 315.95 67.7 313.4 86 Q 312.15 87.2 312.15 90.35 Q 312.15 93.75 314.05 98.1 Q 315.95 102.25 315.95 107.3 Q 315.95 116 308.7 116.7 Q 291.05 117.05 270.2 118.2 Q 255.7 118.9 227.65 118.7 Q 202.15 118.2 200.25 118.2 Q 182.6 118.2 132.15 117.05 Q 92.45 116 63.45 116.7 Q 44.5 117.25 7.95 116 Q 3.2 102.95 3.2 85.1 Q 7.3 58.05 7.3 46.65 Q 5.45 38.2 7.3 33.6 Q 7.95 32.45 8.6 31.65 L 8.6 29.75 L 8.6 26.35 Q 8.6 11.05 9.85 1.2 Q 39.15 1.65 95.6 2.6 Q 130.9 3.45 157.05 3.45 Q 163.65 3.45 170 3.45 Q 197.7 3.2 202.75 2.35 Q 209.4 1.65 216.65 1.65 Q 223.9 1.65 315.95 5.3 L 318.45 12.35 Q 318.45 18.35 315.3 30.45 Q 312.15 42.55 312.15 48.3 Q 312.15 53.7 314.05 58.3 M 312.15 48.3 L 312.15 48.3 "/>
+    <text fill="#000000" font-family="NanumGothic, serif" font-size="28" font-weight="normal">
+      <tspan x="48.8" y="68.35">LOAD and SETUP</tspan>
+    </text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 165, 192)">
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 314.05 58.3 Q 315.95 63.1 315.95 66.4 Q 315.95 67.7 313.4 86 Q 312.15 87.2 312.15 90.35 Q 312.15 93.75 314.05 98.1 Q 315.95 102.25 315.95 107.3 Q 315.95 116 308.7 116.7 Q 291.05 117.05 270.2 118.2 Q 255.7 118.9 227.65 118.7 Q 202.15 118.2 200.25 118.2 Q 182.6 118.2 132.15 117.05 Q 92.45 116 63.45 116.7 Q 44.5 117.25 7.95 116 Q 3.2 102.95 3.2 85.1 Q 7.3 58.05 7.3 46.65 Q 5.45 38.2 7.3 33.6 Q 7.95 32.45 8.6 31.65 L 8.6 29.75 L 8.6 26.35 Q 8.6 11.05 9.85 1.2 Q 39.15 1.65 95.6 2.6 Q 130.9 3.45 157.05 3.45 Q 163.65 3.45 170 3.45 Q 197.7 3.2 202.75 2.35 Q 209.4 1.65 216.65 1.65 Q 223.9 1.65 315.95 5.3 L 318.45 12.35 Q 318.45 18.35 315.3 30.45 Q 312.15 42.55 312.15 48.3 Q 312.15 53.7 314.05 58.3 M 312.15 48.3 L 312.15 48.3 "/>
+    <text fill="#000000" font-family="NanumGothic, serif" font-size="28" font-weight="normal">
+      <tspan x="32.65" y="51.35">UPDATE game logic</tspan>
+      <tspan x="36.55" y="84.95">according to INPUT</tspan>
+    </text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 165, 377)">
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 314.05 58.3 Q 315.95 63.1 315.95 66.4 Q 315.95 67.7 313.4 86 Q 312.15 87.2 312.15 90.35 Q 312.15 93.75 314.05 98.1 Q 315.95 102.25 315.95 107.3 Q 315.95 116 308.7 116.7 Q 291.05 117.05 270.2 118.2 Q 255.7 118.9 227.65 118.7 Q 202.15 118.2 200.25 118.2 Q 182.6 118.2 132.15 117.05 Q 92.45 116 63.45 116.7 Q 44.5 117.25 7.95 116 Q 3.2 102.95 3.2 85.1 Q 7.3 58.05 7.3 46.65 Q 5.45 38.2 7.3 33.6 Q 7.95 32.45 8.6 31.65 L 8.6 29.75 L 8.6 26.35 Q 8.6 11.05 9.85 1.2 Q 39.15 1.65 95.6 2.6 Q 130.9 3.45 157.05 3.45 Q 163.65 3.45 170 3.45 Q 197.7 3.2 202.75 2.35 Q 209.4 1.65 216.65 1.65 Q 223.9 1.65 315.95 5.3 L 318.45 12.35 Q 318.45 18.35 315.3 30.45 Q 312.15 42.55 312.15 48.3 Q 312.15 53.7 314.05 58.3 M 312.15 48.3 L 312.15 48.3 "/>
+    <text fill="#000000" font-family="NanumGothic, serif" font-size="28" font-weight="normal">
+      <tspan x="25.45" y="68.35">RENDER game world</tspan>
+    </text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path stroke="#000000" stroke-opacity="0.00784313725490196" stroke-width="10" fill="none" d="M 165 437 Q 1 339 165 252 "/>
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 165 437 Q 1 339 165 252 "/>
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 151.5 247.85 L 165 252 L 160.85 265.5 "/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path stroke="#000000" stroke-opacity="0.00784313725490196" stroke-width="10" fill="none" d="M 327 130 Q 326 153 326 192 "/>
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 327 130 Q 326 153 326 192 "/>
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 336 182 L 326 192 L 316 182 "/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path stroke="#000000" stroke-opacity="0.00784313725490196" stroke-width="10" fill="none" d="M 326 312 Q 326.5 346 326 377 "/>
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 326 312 Q 326.5 346 326 377 "/>
+    <path stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" d="M 336.15 367.15 L 326 377 L 316.15 366.85 "/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 10, 305)">
+    <path stroke="#000000" stroke-opacity="0" stroke-width="1" fill="none" d="M 80.6 71.6 Q 79.75 72.5 78.5 72.5 L 3.5 72.5 Q 2.25 72.5 1.4 71.6 Q 0.5 70.75 0.5 69.5 L 0.5 3.5 Q 0.5 2.25 1.4 1.4 Q 2.25 0.5 3.5 0.5 L 78.5 0.5 Q 79.75 0.5 80.6 1.4 Q 81.5 2.25 81.5 3.5 L 81.5 69.5 Q 81.5 70.75 80.6 71.6 "/>
+    <text fill="#000000" font-family="NanumGothic, serif" font-size="28" font-weight="normal">
+      <tspan x="24" y="27.35">60</tspan>
+      <tspan x="18.25" y="60.95">FPS</tspan>
+    </text>
+  </g>
+</svg>
