@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<head>
+  <title>An introduction to HTML5 game development</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="minideck/minideck.css" type="text/css">
+  <script src="minideck/minideck.js"></script>
+  <script src="minideck/vendor/highlight.js"></script>
+  <link rel="stylesheet" href="minideck/vendor/highlight.css" type="text/css">
+  <link rel="stylesheet" href="minideck/simple-theme.css" type="text/css">
+</head>
+<body>
+  <article id="deck">
+    <header>
+      <progress></progress>
+    </header>
+    <section class="title">
+      <h1>An introduction<br>to HTML5 game development</h1>
+      <p>Belén Albeza</p>
+      <p><a href="https://belenalbeza.com">belenalbeza.com</a>&nbsp;//&nbsp;<a href="https://twitter.com/ladybenko">@ladybenko</a></p>
+      <p class="breathe">Deck:<br><a href="https://belen-albeza.github.io/intro-gamedev">https://belen-albeza.github.io/intro-gamedev</a></p>
+    </section>
+    <section class="centered">
+      <h1>I. Web tech</h1>
+    </section>
+    <section>
+      <h1>Why HTML5 for games?</h1>
+      <ul>
+        <li>The power of an URL</li>
+        <li>Because we <em>can</em></li>
+      </ul>
+    </section>
+    <section>
+      <h1>HTML5 tech to support games</h1>
+      <ul>
+        <li>Drawing API's: Canvas (2D) and WebGL (3D)</li>
+        <li>Input: keyboard, mouse, touch, gyroscope, etc.</li>
+        <li>Web Audio API</li>
+        <li>Reliable timing: <code>requestAnimationFrame</code></li>
+        <li>WebAssembly, WebVR, etc.</li>
+      </ul>
+    </section>
+    <section>
+      <h1>How?</h1>
+      <ul>
+        <li>Code in <strong>JavaScript</strong> and directly use these API's (maybe with the aid of libraries)</li>
+        <li>Use a <strong>multi-platform engine</strong> that supports exporting to HTML5</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Engines</h1>
+      <ul>
+        <li>3D
+          <ul>
+            <li>Unity (C#)</li>
+            <li>Unreal (C++)</li>
+          </ul>
+        </li>
+        <li>2D
+          <ul>
+            <li>Game Maker (custom language)</li>
+            <li>PICO-8 (Lua)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>JS engines/libraries</h1>
+      <ul>
+        <li>2D
+          <ul>
+            <li>Phaser</li>
+            <li>Pixi (drawing only)</li>
+          </ul>
+        </li>
+        <li>3D
+          <ul>
+            <li>Babylon.js</li>
+            <li>PlayCanvas Engine</li>
+            <li>THREE.js (drawing only)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>II. Game development concepts</h1>
+    </section>
+    <section class="centered">
+      <h1>Basic structures</h1>
+    </section>
+    <section>
+      <h1>FSM</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Ultra-versatile: game states, AI, etc.</li>
+            <li>Easy to implement (<code>switch</code>/polymorphism)</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/fsm.png"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>The game loop</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Ideally render frames 60 times per second (<strong>60 fps</strong>)</li>
+            <li>Two steps each frame: <strong>update</strong> and <strong>render</strong></li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/game_loop.svg"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Game states (I)</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Each state represents a "screen" in the game (the main menu, a level…)</li>
+            <li>They might be in a stack (for "modal" states) or in a FSM</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/game_states_all.png"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Game states (II)</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>States might have a FSM in the inside to handle the different stages</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/game_state.png"></li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>Sprites</h1>
+    </section>
+    <section>
+      <h1>Sprites</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Images with movement/behaviour</li>
+            <li>They can intereact between them <small>(i.e. a bullet destroying an enemy alien)</small></li>
+            <li>They can be animated</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/sonic.png"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Keyframe-based animations</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li><b>frame-by-frame</b>: a different picture is used for every part of the animation</li>
+            <li>There is no interpolation</li>
+            <li>Usually stored in <b>spritesheets</b> for performance</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/spritesheet.png"><img class="figure breathe" src="images/spritesheet_animated.gif"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Skeletal animation</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>"South Park"-like</li>
+            <li>A sprite is decomposed into parts that are rotated, moved, etc.</li>
+            <li>There is interpolation</li>
+            <li>More smooth… but may look odd if not combined with keyframes</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/spine2d.jpg"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Entities and the game world</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li><b>Entities</b>: sprites, UI elements, particle systems, texts, etc.</li>
+            <li>They can be organised in a <b>tree structure</b> that represents the game world</li>
+            <li>If a tree, <b>hierarchical relationships</b> can be useful for handling entities relatively to a parent</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/game_tree.svg">
+          <p><small>See <a href="https://lab.belenalbeza.com/games/ldjam-32/" target="_blank"><i>Metal vs Hipsters</i></a></small></p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Sprite pools and recycling (I)</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>It's useful to group similar sprites in <strong>lists</strong> (f.ex: to check collisions between all the lasers and all the enemies)</li>
+            <li>Pools can be considered (or not) entities.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Sprite pools and recycling (II)</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>The problem: <b>performance issues</b> when creating and releasing sprites</li>
+            <li>Solution: don't release sprites, mark them as "zombies" and re-use them</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/recycle.svg"></li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>Physics</h1>
+    </section>
+    <section>
+      <h1>Old-school physics</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Classical mechanics equations</li>
+            <li>Relatively fast and easy to implement</li>
+            <li>Need the <b>delta</b> time</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Physics engine</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Very powerful and with interesting features</li>
+            <li>Support for solid bodies, joints, ropes, etc.</li>
+            <li>They map game entities to physical bodies</li>
+            <li>Easy to use, but hard to fine-tune</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/physics.svg"></li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>Collision detection</h1>
+    </section>
+    <section>
+      <h1>Pixel-perfect</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>On a 2D graphic environment</li>
+            <li>Precise… at the expense of performance</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Bounding boxes</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Wrap the sprites in rects or circles and check for intersections</li>
+            <li>The fastest method</li>
+            <li>Trivial to implement</li>
+            <li>Variants to support rotations: OBB, AABB</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/bboxes.svg"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Polygon-based</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Separating Axis Theorem</li>
+            <li>Most physics engines use this method</li>
+            <li>Convex polygons only!</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>World and levels</h1>
+    </section>
+    <section>
+      <h1>Scroll</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Your level can be bigger than the screen</li>
+            <li>Parallax effect (layers moving at different speed)</li>
+            <li>Camera to follow a character</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Grids</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Map your world/level into a logical grid</li>
+            <li>Grids are usually square, but can be rects, hexagons…</li>
+            <li>Easy to perform checks and implement the game logic</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/nethack_grid.png"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Tiles</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Build up your world's graphics from tiny pieces (tiles)</li>
+            <li>Widely used in classic games</li>
+            <li>Can be easily mapped into a logical grid</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/square_tiles.png" width="100%"></li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>Rendering</h1>
+    </section>
+    <section>
+      <h1>A 2D scene with 3D graphics</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Why? Performance</li>
+            <li>The trick: orthogonal perspective</li>
+            <li>Graphics are rendered as textures into quads</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/orthogonal_projection.png"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Particles</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Very cool to create effects: explosions, smoke, halos, etc.</li>
+            <li>Can be as tiny as 1 pixel… (in classic games)</li>
+            <li>…or made up of tiny polygons (3D games)</li>
+          </ul>
+        </li>
+        <li><img class="figure" src="images/particles.jpg"></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Bitmap fonts</h1>
+      <ul class="cols">
+        <li>
+          <ul>
+            <li>Store the characters of a font in a spritesheet</li>
+            <li>Easy to implement if monospaced</li>
+          </ul>
+        </li>
+        <li><img class="figure solid-bg" src="images/bitmap_font.png"></li>
+      </ul>
+    </section>
+    <section class="centered">
+      <h1>Thanks!</h1>
+      <p>Questions?</p>
+    </section>
+  </article>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let deck = new MiniDeck(
+            document.querySelectorAll('#deck > section'),
+            document.querySelector('#deck progress'));
+    });
+    
+    if (hljs) { hljs.initHighlightingOnLoad();  }
+  </script>
+</body>
